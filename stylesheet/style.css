@@ -36,8 +36,8 @@ p {
 
 /* ----------------------------------------------- ナビゲーションバー */
 .navbar_brand_logo {
-  width: 32px;
-  height: 32px;
+  width: 150px;
+  height: 50px;
 
   display: inline-block;
 
@@ -74,8 +74,12 @@ p {
 }
 
 /* ----------------------------------------------- カールセル */
+.carousel-caption {
+  bottom: 15%;
+}
+
 .my_carousel_caption {
-  font-size: 52px;
+  font-size: 40px;
 
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -88,8 +92,19 @@ p {
 }
 
 .my_carousel_caption::before {
-  content: url(../img/logoSymbol_White.png);
+  content: '';
+  /*何も入れない*/
   display: block;
+  /*忘れずに！*/
+  width: 360px;
+  /*画像の幅*/
+  margin: auto;
+  height: 120px;
+  /*画像の高さ*/
+  background-image: url(../image/logo.png);
+  background-size: cover;
+  vertical-align: middle;
+  background-repeat: no-repeat;
 }
 
 .carousel-item {
@@ -124,6 +139,7 @@ p {
 }
 
 
+
 /* ----------------------------------------------- ギャラリー */
 
 .gallery::after {
@@ -131,7 +147,10 @@ p {
   margin: 0 auto 0;
 }
 
-
+.chef::after {
+  content: "シェフ";
+  margin: 0 auto 0;
+}
 
 /* ----------------------------------------------- メニュー */
 .menu::after {
@@ -140,9 +159,10 @@ p {
 }
 
 .menu_title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   font-style: normal;
+  padding-bottom: 10px;
 }
 
 .menu_price {
@@ -151,10 +171,23 @@ p {
   font-family: 'Lora', serif;
 }
 
+.menu_pic {
+  border-radius: 50%;
+  padding: 16px;
+}
+
+@media screen and (max-width: 991px) {
+  .menu_pic {
+    height: 30vw;
+    padding: 0px;
+  }
+}
+
+
 /* ----------------------------------------------- レビュー */
 
 .review_wrapper {
-  background-image: url(../img/background-reviews.jpg);
+  background-image: url(../image/review_bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -165,8 +198,8 @@ p {
   border-bottom: solid 1px #fff;
 }
 
-.h_420 {
-  height: 420px;
+.h_350 {
+  height: 350px;
   position: relative;
 }
 
@@ -246,7 +279,7 @@ p {
 }
 
 .footer_brand_logo {
-  width: 64px;
+  width: 180px;
   height: 64px;
   display: inline-block;
   margin-right: 15px;
